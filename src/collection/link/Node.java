@@ -24,14 +24,12 @@ public class Node {
         return sb.toString();
     }
 
-
-
-    public Node getNode(Node node, int index) {
+    public void printAll(Node node) {
         Node x = node;
-        for (int i = 0; i < index; i++) {
-            x = x.next ;
+        while(x != null){
+            System.out.println(x.item);
+            x = x.next;
         }
-        return x;
     }
 
     public Node getLastNode(Node node){
@@ -42,16 +40,16 @@ public class Node {
         return x;
     }
 
+    public Node getNode(Node node, int index) {
+        Node x = node;
+        for (int i = 0; i < index; i++) {
+            x = x.next ;
+        }
+        return x;
+    }
+
     public void add(Node node, String param){
         Node lastNode = getLastNode(node);
         lastNode.next = new Node(param);
-    }
-
-    public void printAll(Node node) {
-        Node x = node;
-        while(x != null){
-            System.out.println(x.item);
-            x = x.next;
-        }
     }
 }
