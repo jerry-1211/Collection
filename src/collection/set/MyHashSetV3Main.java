@@ -1,7 +1,5 @@
 package collection.set;
 
-import collection.set.member.Member;
-
 public class MyHashSetV3Main {
     public static void main(String[] args) {
       MySet<String> set = new MyHashSetV3<>();
@@ -14,7 +12,5 @@ public class MyHashSetV3Main {
       String searchValue = "A";
       boolean result = set.contains(searchValue);
       System.out.println("set.contains(" + searchValue + ") = " + result);
-
-
     }
 }
